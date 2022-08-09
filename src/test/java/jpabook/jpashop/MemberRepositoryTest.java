@@ -16,21 +16,21 @@ import static org.junit.jupiter.api.Assertions.*;
 class MemberRepositoryTest {
 
     @Autowired
-    MemberRepository memberRepository;
+//    MemberRepository memberRepository;
 
     @Test
     @Transactional
     @Rollback(value = false)
     public void testMember() throws Exception{
 
-        Member member = new Member();
-        member.setUsername("memberA");
-
-        Long saveId = memberRepository.save(member);
-        Member memberA = memberRepository.find(saveId);
-
-        Assertions.assertThat(memberA.getId()).isEqualTo(member.getId());
-        Assertions.assertThat(memberA.getUsername()).isEqualTo(member.getUsername());
+//        Member member = new Member();
+//        member.setUsername("memberA");
+//
+//        Long saveId = memberRepository.save(member);
+//        Member memberA = memberRepository.find(saveId);
+//
+//        Assertions.assertThat(memberA.getId()).isEqualTo(member.getId());
+//        Assertions.assertThat(memberA.getUsername()).isEqualTo(member.getUsername());
     }
 
 }
