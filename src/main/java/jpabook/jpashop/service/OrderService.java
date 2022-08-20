@@ -58,9 +58,14 @@ public class OrderService {
         //주문취소
         order.cancel();
     }
+//    @Transactional
+//    public List<Order> findOrders(OrderSearch orderSearch){
+//
+//        return orderRepository.findALl(orderSearch);
+//    }
     @Transactional
     public List<Order> findOrders(OrderSearch orderSearch){
 
-        return orderRepository.findALl(orderSearch);
+        return orderRepository.findAllByCriteria(orderSearch);
     }
 }
